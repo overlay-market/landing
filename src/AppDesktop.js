@@ -156,9 +156,9 @@ class LandingDesktop extends React.Component {
         <img className="github-1" src={github1} />
         <div className="text-9 roboto-normal-mine-shaft-24px">{text9}</div>
         <div className="whitepaper-v2 roboto-normal-mine-shaft-20px">{whitepaperV2}</div>
-        <div className="discord roboto-normal-mine-shaft-20px">{discord}</div>
-        <div className="telegram roboto-normal-mine-shaft-20px">{telegram}</div>
-        <div className="medium roboto-normal-mine-shaft-20px">{medium}</div>
+        <a href="https://discord.gg/vrFWguPf5R" className="discord roboto-normal-mine-shaft-20px">{discord}</a>
+        <a href="https://t.me/overlayprotocol" className="telegram roboto-normal-mine-shaft-20px">{telegram}</a>
+        <a href="https://medium.com/overlay-protocol" className="medium roboto-normal-mine-shaft-20px">{medium}</a>
         <img className="medium-512-1" src={medium5121} />
         <a href="https://twitter.com/OverlayProtocol" className="twitter roboto-normal-mine-shaft-20px">{twitter}</a>
         <img className="telegram-512-1" src={telegram5121} />
@@ -310,7 +310,7 @@ const LandingDesktopData = {
   text5: "Another article link",
   spanText: <>We believe in open-source.<br />Free and fair internet.<br />Other things.<br /></>,
   spanText2: "Read about it",
-  text7: "OIP is the place to do this and to do that and some other such stuff. It’s cool, check it out.",
+  text7: "OIP is the place to contribute to the development of the protocol.",
   text8: "Where all the Noob Noobs go.",
   oip: "OIP",
   github: "Github",
@@ -339,23 +339,23 @@ const LandingDesktopData = {
   line2: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
   line7: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
   line8: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
-  overlayLogoCircles1: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/overlay-logo-circles-1@2x.png",
-  github1: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/github-1@2x.png",
+  overlayLogoCircles1: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/overlay-logo-circles%201.png?alt=media",
+  github1: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/github%201.png?alt=media",
   text9: "📃",
   whitepaperV2: "Docs",
   telegram: "Telegram",
   discord: "Discord",
   medium: "Medium",
-  medium5121: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/medium-512-1@2x.png",
+  medium5121: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Medium-512%201.png?alt=media",
   twitter: "Twitter",
-  telegram5121: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/telegram-512-1@2x.png",
-  x91DiscordLogoLogos5121: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/medium-512-1@2x.png",
-  twitter3: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/twitter-3@2x.png",
-  rectangle15: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/rectangle-15@2x.jpg",
-  rectangle18: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/rectangle-15@2x.jpg",
-  rectangle17: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/rectangle-15@2x.jpg",
-  rectangle16: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/rectangle-15@2x.jpg",
-  rectangle19: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/rectangle-15@2x.jpg",
+  telegram5121: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Telegram-512%201.png?alt=media",
+  x91DiscordLogoLogos5121: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/91_Discord_logo_logos-512%201(1).png?alt=media",
+  twitter3: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/twitter%203.png?alt=media",
+  rectangle15: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-15.png?alt=media",
+  rectangle18: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-18.png?alt=media",
+  rectangle17: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-17.png?alt=media",
+  rectangle16: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-16.png?alt=media",
+  rectangle19: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-19.png?alt=media",
   vector: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/vector@2x.png",
   vector2: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/vector-1@2x.svg",
   text10: "😸",
