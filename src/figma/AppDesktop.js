@@ -95,6 +95,37 @@ class LandingDesktop extends React.Component {
     } = this.props;
 
     return (
+      <Row className="py-2">
+        <Col xs={2} className="roboto-bold-bon-jour-24px">{AppData.text9}</Col>
+        <Col style={{ lineHeight: '1.35' }}>
+          <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.whitepaperV2}</u></a>
+        </Col>
+      </Row>
+      <Row className="py-2">
+        <Col xs={2} className="roboto-bold-bon-jour-24px">
+          <img className="icon-3" src={AppData.discord5121} />
+        </Col>
+        <Col style={{ lineHeight: '1.35' }}>
+          <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.discord}</u></a>
+        </Col>
+      </Row>
+      <Row className="py-2">
+        <Col xs={2} className="roboto-bold-bon-jour-24px">
+          <img className="icon-4" src={AppData.telegram5121} />
+        </Col>
+        <Col style={{ lineHeight: '1.35' }}>
+          <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.telegram}</u></a>
+        </Col>
+      </Row>
+      <Row className="py-2">
+        <Col xs={2} className="roboto-bold-bon-jour-24px">
+          <img className="icon-4" src={AppData.medium5121} />
+        </Col>
+        <Col style={{ lineHeight: '1.35' }}>
+          <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.medium}</u></a>
+        </Col>
+      </Row>
+
       <div className="macbook-3">
         <div className="overlap-group">
           <h1 className="about roboto-black-mine-shaft-36px">{about}</h1>

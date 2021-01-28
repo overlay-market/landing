@@ -9,7 +9,7 @@ library.add(faExternalLinkAlt);
 
 class App extends Component {
 
-  // TODO: state with stats.totalSupply, tvl, spot liquidity, treasury yield
+  // TODO: state with stats.totalSupply, tvl, spot liquidity, staked yield
 
   render() {
     return (
@@ -56,12 +56,6 @@ class App extends Component {
                     </Button>
                   </Row>
                   <Row className="py-2">
-                    <Col xs={2} className="roboto-bold-bon-jour-24px">{AppData.text9}</Col>
-                    <Col style={{ lineHeight: '1.35' }}>
-                      <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.whitepaperV2}</u></a>
-                    </Col>
-                  </Row>
-                  <Row className="py-2">
                     <Col xs={2} className="roboto-bold-bon-jour-24px">
                       <img className="icon-3" src={AppData.twitter3} />
                     </Col>
@@ -71,26 +65,10 @@ class App extends Component {
                   </Row>
                   <Row className="py-2">
                     <Col xs={2} className="roboto-bold-bon-jour-24px">
-                      <img className="icon-3" src={AppData.discord5121} />
-                    </Col>
-                    <Col style={{ lineHeight: '1.35' }}>
-                      <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.discord}</u></a>
-                    </Col>
-                  </Row>
-                  <Row className="py-2">
-                    <Col xs={2} className="roboto-bold-bon-jour-24px">
-                      <img className="icon-4" src={AppData.telegram5121} />
-                    </Col>
-                    <Col style={{ lineHeight: '1.35' }}>
-                      <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.telegram}</u></a>
-                    </Col>
-                  </Row>
-                  <Row className="py-2">
-                    <Col xs={2} className="roboto-bold-bon-jour-24px">
                       <img className="icon-4" src={AppData.medium5121} />
                     </Col>
                     <Col style={{ lineHeight: '1.35' }}>
-                      <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.medium}</u></a>
+                      <a href="https://medium.com/overlay-protocol" className="roboto-normal-mine-shaft-20px"><u>{AppData.medium}</u></a>
                     </Col>
                   </Row>
                 </div>
@@ -118,8 +96,9 @@ class App extends Component {
                     <small className="roboto-normal-mine-shaft-16px text-muted">{AppData.x102482987OvlUsd4}</small>
                   </div>
                   <div className="py-2">
-                    <div className="roboto-bold-mine-shaft-24px"><u>{AppData.treasury}</u></div>
-                    <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x102482987Ovl5}</div>
+                    <div className="roboto-bold-mine-shaft-24px"><u>{AppData.staked}</u></div>
+                    <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x102482987OvlAmount5}</div>
+                    <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x102482987OvlApy5}</div>
                   </div>
                 </div>
               </Container>
@@ -214,7 +193,7 @@ const AppData = {
   totalSupply: "Total supply",
   tvl: "TVL",
   liquidity: "Spot liquidity",
-  treasury: "Treasury yield",
+  staked: "Staked OVL",
   otherData: "Other data",
   x102482987Ovl: "1,024,829.87 OVL",
   x01516Eth: "0.1516 ETH",
@@ -223,11 +202,12 @@ const AppData = {
   x0005743Eth: "0.005743 ETH",
   x3095Eth: "30.95 ETH",
   x102482987Ovl2: "124,056.17 OVL",
-  x102482987OvlUsd2: "1,240,562 USD",
+  x102482987OvlUsd2: "2,480,562 USD",
   x102482987Ovl3: "1,024,829.87 OVL",
-  x102482987Ovl4: "526,056.17 OVL",
+  x102482987Ovl4: "263,056.17 OVL",
   x102482987OvlUsd4: "5,260,562 USD",
-  x102482987Ovl5: "27.67123% (APY)",
+  x102482987OvlAmount5: "Amount: 263,056.17 OVL",
+  x102482987OvlApy5: "APY: 27.67123%",
   line2: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
   line7: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
   line8: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
