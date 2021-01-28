@@ -8,13 +8,16 @@ import './App.css';
 library.add(faExternalLinkAlt);
 
 class App extends Component {
+
+  // TODO: state with stats.totalSupply, tvl, spot liquidity, treasury yield
+
   render() {
     return (
       <div className="App p-5">
-        <Container fluid className="pb-5">
+        <Container fluid className="pb-4">
           <img className="overlay-logo-1" src={AppData.overlayLogo1} />
         </Container>
-        <Container fluid className="py-2 px-0">
+        <Container fluid className="py-3 px-0">
           <Row>
             <Col lg={true}>
               <Container className="py-3 px-0" style={{ width: '256px' }}>
@@ -55,7 +58,7 @@ class App extends Component {
                   <Row className="py-2">
                     <Col xs={2} className="roboto-bold-bon-jour-24px">{AppData.text9}</Col>
                     <Col style={{ lineHeight: '1.35' }}>
-                      <a href="#" className="roboto-normal-mine-shaft-20px"><u>{AppData.whitepaperV2}</u></a>
+                      <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.whitepaperV2}</u></a>
                     </Col>
                   </Row>
                   <Row className="py-2">
@@ -71,7 +74,7 @@ class App extends Component {
                       <img className="icon-3" src={AppData.discord5121} />
                     </Col>
                     <Col style={{ lineHeight: '1.35' }}>
-                      <a href="https://discord.gg/vrFWguPf5R" className="roboto-normal-mine-shaft-20px"><u>{AppData.discord}</u></a>
+                      <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.discord}</u></a>
                     </Col>
                   </Row>
                   <Row className="py-2">
@@ -79,7 +82,7 @@ class App extends Component {
                       <img className="icon-4" src={AppData.telegram5121} />
                     </Col>
                     <Col style={{ lineHeight: '1.35' }}>
-                      <a href="https://t.me/overlayprotocol" className="roboto-normal-mine-shaft-20px"><u>{AppData.telegram}</u></a>
+                      <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.telegram}</u></a>
                     </Col>
                   </Row>
                   <Row className="py-2">
@@ -87,7 +90,7 @@ class App extends Component {
                       <img className="icon-4" src={AppData.medium5121} />
                     </Col>
                     <Col style={{ lineHeight: '1.35' }}>
-                      <a href="https://medium.com/overlay-protocol" className="roboto-normal-mine-shaft-20px"><u>{AppData.medium}</u></a>
+                      <a href="#" className="roboto-normal-mine-shaft-20px btn-link disabled"><u>{AppData.medium}</u></a>
                     </Col>
                   </Row>
                 </div>
@@ -98,6 +101,26 @@ class App extends Component {
                 <div>
                   <h1 className="roboto-black-mine-shaft-36px m-0">Stats</h1>
                   <img className="line-3" src={AppData.line3} />
+                </div>
+                <div className="d-flex flex-column">
+                  <div className="py-2">
+                    <div className="roboto-bold-mine-shaft-24px"><u>{AppData.totalSupply}</u></div>
+                    <div className="py-1 roboto-normal-mine-shaft-16px">{AppData.x102482987Ovl3}</div>
+                  </div>
+                  <div className="py-2">
+                    <div className="roboto-bold-mine-shaft-24px"><u>{AppData.tvl}</u></div>
+                    <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x102482987Ovl2}</div>
+                    <small className="roboto-normal-mine-shaft-16px text-muted">{AppData.x102482987OvlUsd2}</small>
+                  </div>
+                  <div className="py-2">
+                    <div className="roboto-bold-mine-shaft-24px"><u>{AppData.liquidity}</u></div>
+                    <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x102482987Ovl4}</div>
+                    <small className="roboto-normal-mine-shaft-16px text-muted">{AppData.x102482987OvlUsd4}</small>
+                  </div>
+                  <div className="py-2">
+                    <div className="roboto-bold-mine-shaft-24px"><u>{AppData.treasury}</u></div>
+                    <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x102482987Ovl5}</div>
+                  </div>
                 </div>
               </Container>
             </Col>
@@ -165,7 +188,7 @@ const AppData = {
   overlayLogo1: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/overlay-logo-1@2x.png",
   text1a: "A cryptocurrency that lets you long or short DeFi data streams.",
   text1b: "Dynamically mints or burns to compensate traders for their profit or loss.",
-  text1c: "Governs the system so those who succeed decide the trajectory of the protocol.",
+  text1c: "Governs the system so successful traders decide the trajectory of the protocol.",
   whatIsOverlay: "What is Overlay?",
   text2: "A deep dive of our metrics",
   text3: "Tokenomics of Overlay",
@@ -190,6 +213,8 @@ const AppData = {
   line12: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-12@2x.svg",
   totalSupply: "Total supply",
   tvl: "TVL",
+  liquidity: "Spot liquidity",
+  treasury: "Treasury yield",
   otherData: "Other data",
   x102482987Ovl: "1,024,829.87 OVL",
   x01516Eth: "0.1516 ETH",
@@ -198,7 +223,11 @@ const AppData = {
   x0005743Eth: "0.005743 ETH",
   x3095Eth: "30.95 ETH",
   x102482987Ovl2: "124,056.17 OVL",
+  x102482987OvlUsd2: "1,240,562 USD",
   x102482987Ovl3: "1,024,829.87 OVL",
+  x102482987Ovl4: "526,056.17 OVL",
+  x102482987OvlUsd4: "5,260,562 USD",
+  x102482987Ovl5: "27.67123% (APY)",
   line2: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
   line7: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
   line8: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
