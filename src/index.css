@@ -1,8 +1,9 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:900,400,700");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roboto", Helvetica, Arial, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +11,77 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.roboto-black-mine-shaft-36px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+}
+.roboto-bold-bon-jour-24px {
+  color: var(--bon-jour);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.roboto-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.roboto-bold-mine-shaft-24px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.roboto-bold-mine-shaft-36px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+.roboto-normal-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.roboto-normal-mine-shaft-16px-2 {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 16px;
+}
+.roboto-normal-mine-shaft-20px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+.roboto-normal-mine-shaft-24px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  --bon-jour: rgba(224, 224, 224, 1);
+  --concrete: rgba(242, 242, 242, 1);
+  --mine-shaft: rgba(51, 51, 51, 1);
+}
+
+:root {
+  --bon-jour: rgba(224, 224, 224, 1);
+  --concrete: rgba(242, 242, 242, 1);
+  --mine-shaft: rgba(51, 51, 51, 1);
 }

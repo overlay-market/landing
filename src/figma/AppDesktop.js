@@ -302,7 +302,7 @@ const LandingDesktopData = {
   technical: "Technical",
   why: "Why",
   overlayLogo1: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/overlay-logo-1@2x.png",
-  text1: <>A cryptocurrency that lets you long or short DeFi data streams.<br /><br />Recreates the dynamics of trading, but without counterparties.<br /><br />Dynamically mints or burns to compensate traders for their profit or loss.</>,
+  text1: <>A cryptocurrency that lets you long or short DeFi data streams.<br /><br />Dynamically mints or burns to compensate traders for their profit or loss.<br /><br />Governs the system so those who succeed dictate the trajectory of the protocol.</>,
   whatIsOverlay: "What is Overlay?",
   text2: "A deep dive of our metrics",
   text3: "Tokenomics of Overlay",
