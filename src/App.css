@@ -46,6 +46,11 @@
   width: 35px;
 }
 
+.icon-5 {
+  height: 26px;
+  width: 24px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

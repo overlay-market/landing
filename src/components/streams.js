@@ -49,7 +49,7 @@ class Streams extends Component {
   // TODO: state = {}, stream fetch ...
 
   render = () => (
-    <Container fluid>
+    <Container fluid className="p-0">
       <Row>
         <Col lg={true}>
           <Container className="py-3 px-0" style={{ width: '256px' }}>

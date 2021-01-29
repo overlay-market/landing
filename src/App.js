@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import { Button, Container, Col, Row, ListGroup } from 'react-bootstrap';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { Container, Col, Row } from 'react-bootstrap';
 import './App.css';
 import Header from './components/header';
 import About from './components/about';
 import Links from './components/links';
+import Stakeholders from './components/stakeholders';
 import Stats from './components/stats';
 import Streams from './components/streams';
+import Technical from './components/technical';
 
-library.add(faExternalLinkAlt);
 
 class App extends Component {
 
@@ -21,7 +18,7 @@ class App extends Component {
     return (
       <div className="App p-5">
         <Header />
-        <Container fluid className="pt-3 px-0">
+        <Container fluid className="mt-3 px-0">
           <Row>
             <Col lg={true}>
               <About />
@@ -35,6 +32,17 @@ class App extends Component {
           </Row>
         </Container>
         <Streams />
+        <Container fluid className="mt-3 px-0">
+          <Row>
+            <Col lg={true}>
+              <Technical />
+            </Col>
+            <Col lg={true}>
+              <Stakeholders />
+            </Col>
+            <Col lg={true} />
+          </Row>
+        </Container>
       </div>
     );
   }
