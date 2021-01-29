@@ -48,6 +48,32 @@ class Streams extends Component {
 
   // TODO: state = {}, stream fetch ...
 
+  state = {
+    feeds: [],
+  }
+
+  // Fetches ETH quote price from store given priceId
+  renderPrice = (priceId) => {
+    if (!priceId) {
+      return "- ETH";
+    }
+    return ("hi ETH");
+  }
+
+  renderStream = (stream) => (
+    <Row className="py-2 align-items-center">
+      <Col xs={5}>
+        <div className="py-2">
+          <div className="roboto-bold-mine-shaft-16px"><u>{stream.ticker}</u></div>
+          <div className="pt-1 roboto-normal-mine-shaft-16px">{this.renderPrice(stream.price)}</div>
+        </div>
+      </Col>
+      <Col>
+        <img className="rectangle-15" src={stream.img} />
+      </Col>
+    </Row>
+  )
+
   render = () => (
     <Container fluid className="p-0">
       <Row>
@@ -58,19 +84,7 @@ class Streams extends Component {
               <img className="line-3" src={data.line3} />
             </div>
             <div className="d-flex flex-column">
-              {data.grid[0].map((el) => (
-                <Row className="py-2 align-items-center">
-                  <Col xs={5}>
-                    <div className="py-2">
-                      <div className="roboto-bold-mine-shaft-16px"><u>{el.ticker}</u></div>
-                      <div className="pt-1 roboto-normal-mine-shaft-16px">{el.price}</div>
-                    </div>
-                  </Col>
-                  <Col>
-                    <img className="rectangle-15" src={el.img} />
-                  </Col>
-                </Row>
-              ))}
+              {data.grid[0].map((el) => this.renderStream(el))}
             </div>
           </Container>
         </Col>
@@ -81,19 +95,7 @@ class Streams extends Component {
               <span style={{ height: '1px' }}>&nbsp;</span>
             </div>
             <div className="d-flex flex-column">
-              {data.grid[1].map((el) => (
-                <Row className="py-2 align-items-center">
-                  <Col xs={5}>
-                    <div className="py-2">
-                      <div className="roboto-bold-mine-shaft-16px"><u>{el.ticker}</u></div>
-                      <div className="pt-1 roboto-normal-mine-shaft-16px">{el.price}</div>
-                    </div>
-                  </Col>
-                  <Col>
-                    <img className="rectangle-15" src={el.img} />
-                  </Col>
-                </Row>
-              ))}
+              {data.grid[1].map((el) => this.renderStream(el))}
             </div>
           </Container>
         </Col>
@@ -104,19 +106,7 @@ class Streams extends Component {
               <span style={{ height: '1px' }}>&nbsp;</span>
             </div>
             <div className="d-flex flex-column">
-              {data.grid[2].map((el) => (
-                <Row className="py-2 align-items-center">
-                  <Col xs={5}>
-                    <div className="py-2">
-                      <div className="roboto-bold-mine-shaft-16px"><u>{el.ticker}</u></div>
-                      <div className="pt-1 roboto-normal-mine-shaft-16px">{el.price}</div>
-                    </div>
-                  </Col>
-                  <Col>
-                    <img className="rectangle-15" src={el.img} />
-                  </Col>
-                </Row>
-              ))}
+              {data.grid[2].map((el) => this.renderStream(el))}
             </div>
           </Container>
         </Col>
