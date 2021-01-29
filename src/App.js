@@ -115,9 +115,9 @@ class App extends Component {
                 </div>
                 <div className="d-flex flex-column">
                   <Row className="py-2 align-items-center">
-                    <Col className="roboto-bold-mine-shaft-24px">
+                    <Col xs={5}>
                       <div className="py-2">
-                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader2Props.totalSupply}</u></div>
+                        <div className="roboto-bold-mine-shaft-16px"><u>{AppData.cardHeader2Props.totalSupply}</u></div>
                         <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x01516Eth}</div>
                       </div>
                     </Col>
@@ -126,9 +126,9 @@ class App extends Component {
                     </Col>
                   </Row>
                   <Row className="py-2 align-items-center">
-                    <Col className="roboto-bold-mine-shaft-24px">
+                    <Col xs={5}>
                       <div className="py-2">
-                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader24Props.totalSupply}</u></div>
+                        <div className="roboto-bold-mine-shaft-16px"><u>{AppData.cardHeader24Props.totalSupply}</u></div>
                         <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x0005743Eth}</div>
                       </div>
                     </Col>
@@ -137,9 +137,9 @@ class App extends Component {
                     </Col>
                   </Row>
                   <Row className="py-2 align-items-center">
-                    <Col className="roboto-bold-mine-shaft-24px">
+                    <Col xs={5}>
                       <div className="py-2">
-                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader23Props.totalSupply}</u></div>
+                        <div className="roboto-bold-mine-shaft-16px"><u>{AppData.cardHeader23Props.totalSupply}</u></div>
                         <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x001263Eth}</div>
                       </div>
                     </Col>
@@ -158,9 +158,9 @@ class App extends Component {
                 </div>
                 <div className="d-flex flex-column">
                   <Row className="py-2 align-items-center">
-                    <Col className="roboto-bold-mine-shaft-24px">
+                    <Col xs={5}>
                       <div className="py-2">
-                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader25Props.totalSupply}</u></div>
+                        <div className="roboto-bold-mine-shaft-16px"><u>{AppData.cardHeader25Props.totalSupply}</u></div>
                         <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x3095Eth}</div>
                       </div>
                     </Col>
@@ -169,9 +169,9 @@ class App extends Component {
                     </Col>
                   </Row>
                   <Row className="py-2 align-items-center">
-                    <Col className="roboto-bold-mine-shaft-24px">
+                    <Col xs={5}>
                       <div className="py-2">
-                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader22Props.totalSupply}</u></div>
+                        <div className="roboto-bold-mine-shaft-16px"><u>{AppData.cardHeader22Props.totalSupply}</u></div>
                         <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x007131Eth}</div>
                       </div>
                     </Col>
@@ -180,9 +180,9 @@ class App extends Component {
                     </Col>
                   </Row>
                   <Row className="py-2 align-items-center">
-                    <Col className="roboto-bold-mine-shaft-24px">
+                    <Col xs={5}>
                       <div className="py-2">
-                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader26Props.totalSupply}</u></div>
+                        <div className="roboto-bold-mine-shaft-16px"><u>{AppData.cardHeader26Props.totalSupply}</u></div>
                         <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x000Eth}</div>
                       </div>
                     </Col>
