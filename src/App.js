@@ -12,8 +12,6 @@ import Technical from './components/technical';
 
 class App extends Component {
 
-  // TODO: state with stats.totalSupply, tvl, spot liquidity, staked yield
-
   render() {
     return (
       <div className="App p-5">

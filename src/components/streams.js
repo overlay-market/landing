@@ -1,5 +1,23 @@
+/*
+Copied and modified from KP3R/yearn code:
+https://github.com/keep3r-network/Uniquote/blob/master/src/components/feeds/feeds.jsx
+
+See '../stores/kp3r/store.js'
+*/
+
 import React, { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
+import {
+  GET_FEEDS,
+  FEEDS_RETURNED,
+  FEEDS_UPDATED,
+} from '../stores/constants';
+import Store from '../stores/kp3r/store';
+
+const emitter = Store.emitter;
+const dispatcher = Store.dispatcher;
+const store = Store.store;
+
 
 const data = {
   streams: "Streams",
@@ -8,36 +26,36 @@ const data = {
     [
       {
         ticker: "AAVE-ETH",
-        price: "0.1516 ETH", // TODO: fetch from uniquote
+        address: "0xDFC14d2Af169B0D36C4EFF567Ada9b2E0CAE044f",
         img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-15.png?alt=media",
       },
       {
         ticker: "SUSHI-ETH",
-        price: "0.005743 ETH", // TODO: fetch from uniquote
+        address: "0xCE84867c3c02B05dc570d0135103d3fB9CC19433",
         img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-18.png?alt=media",
       },
     ],
     [
       {
         ticker: "YFI-ETH",
-        price: "30.95 ETH", // TODO: fetch from uniquote
+        address: "0x2fDbAdf3C4D5A8666Bc06645B8358ab803996E28",
         img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-17.png?alt=media",
       },
       {
         ticker: "UNI-ETH",
-        price: "0.007131 ETH", // TODO: fetch from uniquote
+        address: "0xd3d2E2692501A5c9Ca623199D38826e513033a17",
         img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-16.png?alt=media",
       },
     ],
     [
       {
         ticker: "SNX-ETH",
-        price: "0.01263 ETH", // TODO: fetch from uniquote
+        address: "0x43AE24960e5534731Fc831386c07755A2dc33D47",
         img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-19.png?alt=media",
       },
       {
         ticker: "OVL-ETH",
-        price: "- ETH", // TODO: fetch from uniquote
+        address: "",
         img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-20.png?alt=media",
       },
     ]
@@ -46,33 +64,46 @@ const data = {
 
 class Streams extends Component {
 
-  // TODO: state = {}, stream fetch ...
+  constructor(props) {
+    super();
 
-  state = {
-    feeds: [],
-  }
+    const feeds = this.feedsToMap(store.getStore('feeds'));
 
-  // Fetches ETH quote price from store given priceId
-  renderPrice = (priceId) => {
-    if (!priceId) {
-      return "- ETH";
+    this.state = {
+      feeds: feeds
     }
-    return ("hi ETH");
+
+    dispatcher.dispatch({ type: GET_FEEDS, content: {} });
   }
 
-  renderStream = (stream) => (
-    <Row className="py-2 align-items-center">
-      <Col xs={5}>
-        <div className="py-2">
-          <div className="roboto-bold-mine-shaft-16px"><u>{stream.ticker}</u></div>
-          <div className="pt-1 roboto-normal-mine-shaft-16px">{this.renderPrice(stream.price)}</div>
-        </div>
-      </Col>
-      <Col>
-        <img className="rectangle-15" src={stream.img} />
-      </Col>
-    </Row>
-  )
+  componentWillMount() {
+    emitter.on(FEEDS_UPDATED, this.feedsReturned);
+    emitter.on(FEEDS_RETURNED, this.feedsReturned);
+  };
+
+  componentWillUnmount() {
+    emitter.removeListener(FEEDS_UPDATED, this.feedsReturned);
+    emitter.removeListener(FEEDS_RETURNED, this.feedsReturned);
+  };
+
+  feedsToMap = (feeds) => {
+    // converts feeds array to map
+    const feedsMap = {};
+    if (feeds) {
+      feeds.forEach((feed) => {
+        if (typeof feed != 'object' || !('address' in feed)) {
+          return;
+        }
+        feedsMap[feed.address] = feed;
+      });
+    }
+    return feedsMap;
+  }
+
+  feedsReturned = () => {
+    // create a feeds map then set
+    this.setState({ feeds: this.feedsToMap(store.getStore('feeds')) });
+  }
 
   render = () => (
     <Container fluid className="p-0">
@@ -113,6 +144,29 @@ class Streams extends Component {
       </Row>
     </Container>
   );
+
+  renderStream = (stream) => (
+    <Row className="py-2 align-items-center">
+      <Col xs={5}>
+        <div className="py-2">
+          <div className="roboto-bold-mine-shaft-16px"><u>{stream.ticker}</u></div>
+          <div className="pt-1 roboto-normal-mine-shaft-16px">{this.renderPrice(stream.address)}</div>
+        </div>
+      </Col>
+      <Col>
+        <img className="rectangle-15" src={stream.img} />
+      </Col>
+    </Row>
+  );
+
+  // Fetches ETH quote price from store given priceId
+  renderPrice = (address) => {
+    const { feeds } = this.state;
+    if (typeof feeds != 'object' || !address || !(address in feeds)) {
+      return "- ETH";
+    }
+    return `${feeds[address].consult.consult0To1.toFixed(4)} ETH`;
+  }
 }
 
 export default Streams;
