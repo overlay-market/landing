@@ -8,14 +8,14 @@ const data = {
   tvl: "TVL",
   liquidity: "Spot liquidity",
   staked: "Staked OVL",
-  x102482987Ovl: "1,024,829.87 OVL",
-  x102482987Ovl2: "124,056.17 OVL",
-  x102482987OvlUsd2: "2,480,562 USD",
-  x102482987Ovl3: "1,024,829.87 OVL",
-  x102482987Ovl4: "263,056.17 OVL",
-  x102482987OvlUsd4: "5,260,562 USD",
-  x102482987OvlAmount5: "Amount: 263,056.17 OVL",
-  x102482987OvlApy5: "APY: 27.67123%",
+  x102482987Ovl: "- OVL",
+  x102482987Ovl2: "- OVL",
+  x102482987OvlUsd2: "- USD",
+  x102482987Ovl3: "- OVL",
+  x102482987Ovl4: "- OVL",
+  x102482987OvlUsd4: "- USD",
+  x102482987OvlAmount5: "Amount: - OVL",
+  x102482987OvlApy5: "APY: - %",
 };
 
 class Stats extends Component {
