@@ -34,6 +34,20 @@ code {
   font-style: normal;
   font-weight: 700;
 }
+.roboto-bold-mine-shaft-18px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.roboto-bold-mine-shaft-21px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+}
 .roboto-bold-mine-shaft-24px {
   color: var(--mine-shaft);
   font-family: "Roboto", Helvetica, Arial, serif;
@@ -52,6 +66,13 @@ code {
   color: var(--mine-shaft);
   font-family: "Roboto", Helvetica, Arial, serif;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.roboto-normal-mine-shaft-14px {
+  color: var(--mine-shaft);
+  font-family: "Roboto", Helvetica, Arial, serif;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
 }

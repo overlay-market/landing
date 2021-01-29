@@ -17,7 +17,7 @@ class App extends Component {
         <Container fluid className="pb-4">
           <img className="overlay-logo-1" src={AppData.overlayLogo1} />
         </Container>
-        <Container fluid className="py-3 px-0">
+        <Container fluid className="pt-3 px-0">
           <Row>
             <Col lg={true}>
               <Container className="py-3 px-0" style={{ width: '256px' }}>
@@ -105,6 +105,97 @@ class App extends Component {
             </Col>
           </Row>
         </Container>
+        <Container fluid>
+          <Row>
+            <Col lg={true}>
+              <Container className="py-3 px-0" style={{ width: '256px' }}>
+                <div>
+                  <h1 className="roboto-black-mine-shaft-36px m-0">Streams</h1>
+                  <img className="line-3" src={AppData.line3} />
+                </div>
+                <div className="d-flex flex-column">
+                  <Row className="py-2 align-items-center">
+                    <Col className="roboto-bold-mine-shaft-24px">
+                      <div className="py-2">
+                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader2Props.totalSupply}</u></div>
+                        <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x01516Eth}</div>
+                      </div>
+                    </Col>
+                    <Col>
+                      <img className="rectangle-15" src={AppData.rectangle15} />
+                    </Col>
+                  </Row>
+                  <Row className="py-2 align-items-center">
+                    <Col className="roboto-bold-mine-shaft-24px">
+                      <div className="py-2">
+                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader24Props.totalSupply}</u></div>
+                        <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x0005743Eth}</div>
+                      </div>
+                    </Col>
+                    <Col>
+                      <img className="rectangle-15" src={AppData.rectangle18} />
+                    </Col>
+                  </Row>
+                  <Row className="py-2 align-items-center">
+                    <Col className="roboto-bold-mine-shaft-24px">
+                      <div className="py-2">
+                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader23Props.totalSupply}</u></div>
+                        <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x001263Eth}</div>
+                      </div>
+                    </Col>
+                    <Col>
+                      <img className="rectangle-15" src={AppData.rectangle19} />
+                    </Col>
+                  </Row>
+                </div>
+              </Container>
+            </Col>
+            <Col lg={true}>
+              <Container className="py-3 px-0" style={{ width: '256px' }}>
+                <div className="d-none d-lg-block">
+                  <h1 className="roboto-black-mine-shaft-36px m-0">&nbsp;</h1>
+                  <span style={{ height: '1px' }}>&nbsp;</span>
+                </div>
+                <div className="d-flex flex-column">
+                  <Row className="py-2 align-items-center">
+                    <Col className="roboto-bold-mine-shaft-24px">
+                      <div className="py-2">
+                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader25Props.totalSupply}</u></div>
+                        <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x3095Eth}</div>
+                      </div>
+                    </Col>
+                    <Col>
+                      <img className="rectangle-15" src={AppData.rectangle17} />
+                    </Col>
+                  </Row>
+                  <Row className="py-2 align-items-center">
+                    <Col className="roboto-bold-mine-shaft-24px">
+                      <div className="py-2">
+                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader22Props.totalSupply}</u></div>
+                        <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x007131Eth}</div>
+                      </div>
+                    </Col>
+                    <Col>
+                      <img className="rectangle-15" src={AppData.rectangle16} />
+                    </Col>
+                  </Row>
+                  <Row className="py-2 align-items-center">
+                    <Col className="roboto-bold-mine-shaft-24px">
+                      <div className="py-2">
+                        <div className="roboto-bold-mine-shaft-18px"><u>{AppData.cardHeader26Props.totalSupply}</u></div>
+                        <div className="pt-1 roboto-normal-mine-shaft-16px">{AppData.x000Eth}</div>
+                      </div>
+                    </Col>
+                    <Col>
+                      <img className="rectangle-15" src={AppData.rectangle20} />
+                    </Col>
+                  </Row>
+                </div>
+              </Container>
+            </Col>
+            <Col lg={true} />
+          </Row>
+        </Container>
       </div>
     );
   }
@@ -142,6 +233,11 @@ const cardHeader24Data = {
 
 const cardHeader25Data = {
   totalSupply: "YFI-ETH",
+  line2: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
+};
+
+const cardHeader26Data = {
+  totalSupply: "OVL-ETH",
   line2: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-2@2x.svg",
 };
 
@@ -197,9 +293,10 @@ const AppData = {
   otherData: "Other data",
   x102482987Ovl: "1,024,829.87 OVL",
   x01516Eth: "0.1516 ETH",
-  x007131Eth: ".007131 ETH",
+  x007131Eth: "0.007131 ETH",
   x001263Eth: "0.01263 ETH",
   x0005743Eth: "0.005743 ETH",
+  x000Eth: "- ETH",
   x3095Eth: "30.95 ETH",
   x102482987Ovl2: "124,056.17 OVL",
   x102482987OvlUsd2: "2,480,562 USD",
@@ -228,6 +325,7 @@ const AppData = {
   rectangle17: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-17.png?alt=media",
   rectangle16: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-16.png?alt=media",
   rectangle19: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-19.png?alt=media",
+  rectangle20: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-20.png?alt=media",
   vector: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/vector@2x.png",
   vector2: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/vector-1@2x.svg",
   text10: "😸",
@@ -238,6 +336,7 @@ const AppData = {
   cardHeader23Props: cardHeader23Data,
   cardHeader24Props: cardHeader24Data,
   cardHeader25Props: cardHeader25Data,
+  cardHeader26Props: cardHeader26Data,
   buttonPrimaryProps: buttonPrimaryData,
 };
 
