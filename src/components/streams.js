@@ -162,7 +162,7 @@ class Streams extends Component {
   // Fetches ETH quote price from store given priceId
   renderPrice = (address) => {
     const { feeds } = this.state;
-    if (typeof feeds != 'object' || !address || !(address in feeds)) {
+    if (typeof feeds != 'object' || !address || !(address in feeds) || feeds[address].consult.consult0To1 == null) {
       return "- ETH";
     }
     return `${feeds[address].consult.consult0To1.toFixed(4)} ETH`;
