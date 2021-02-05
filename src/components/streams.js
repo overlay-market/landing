@@ -25,14 +25,14 @@ const data = {
   grid: [
     [
       {
+        ticker: "OVL-ETH",
+        address: "",
+        img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-20.png?alt=media",
+      },
+      {
         ticker: "AAVE-ETH",
         address: "0xDFC14d2Af169B0D36C4EFF567Ada9b2E0CAE044f",
         img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-15.png?alt=media",
-      },
-      {
-        ticker: "SUSHI-ETH",
-        address: "0xCE84867c3c02B05dc570d0135103d3fB9CC19433",
-        img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-18.png?alt=media",
       },
     ],
     [
@@ -54,9 +54,9 @@ const data = {
         img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-19.png?alt=media",
       },
       {
-        ticker: "OVL-ETH",
-        address: "",
-        img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-20.png?alt=media",
+        ticker: "SUSHI-ETH",
+        address: "0xCE84867c3c02B05dc570d0135103d3fB9CC19433",
+        img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-18.png?alt=media",
       },
     ]
   ]
