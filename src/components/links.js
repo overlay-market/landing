@@ -11,7 +11,8 @@ const data = {
   line3: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-3@2x.svg",
   github1: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/github%201.png?alt=media",
   text9: "📃",
-  whitepaperV2: "Docs",
+  whitepaper: "Whitepaper",
+  whitepaper5121: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/OverlayWPv3.pdf?alt=media",
   telegram: "Telegram",
   discord: "Discord",
   medium: "Medium",
@@ -38,6 +39,14 @@ class Links extends Component {
             <span className="mx-2">{data.launchApp}</span>
             <small><FontAwesomeIcon icon="external-link-alt" /></small>
           </Button>
+        </Row>
+        <Row className="py-2">
+          <Col xs={2} className="roboto-bold-bon-jour-24px">
+            <span>{data.text9}</span>
+          </Col>
+          <Col style={{ lineHeight: '1.35' }}>
+            <a href={data.whitepaper5121} className="roboto-normal-mine-shaft-20px"><u>{data.whitepaper}</u></a>
+          </Col>
         </Row>
         <Row className="py-2">
           <Col xs={2} className="roboto-bold-bon-jour-24px">
