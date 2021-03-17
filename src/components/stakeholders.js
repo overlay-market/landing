@@ -4,7 +4,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 const data = {
   stakeholders: "Stakeholders",
   line3: "https://anima-uploads.s3.amazonaws.com/projects/6010bd7cd7c07e842199586a/releases/6010beeddecee5e9c798bed3/img/line-3@2x.svg",
-  names: [],
+  names: ['Polychain', '1kx', 'ParaFi', 'The LAO', 'MetaCartel'],
 };
 
 class Stakeholders extends Component {
@@ -16,7 +16,7 @@ class Stakeholders extends Component {
       </div>
       <div className="d-flex flex-column py-2">
         {data.names.map((name) => (
-          <span className="roboto-normal-mine-shaft-16px">{name}</span>
+          <span className="roboto-normal-mine-shaft-16px py-1">{name}</span>
         ))}
       </div>
     </Container>

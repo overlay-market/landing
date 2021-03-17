@@ -36,6 +36,7 @@ class App extends Component {
               <Technical />
             </Col>
             <Col lg={true}>
+              <Stakeholders />
             </Col>
             <Col lg={true} />
           </Row>

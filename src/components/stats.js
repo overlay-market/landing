@@ -7,7 +7,7 @@ const data = {
   totalSupply: "Total supply",
   tvl: "TVL",
   liquidity: "Spot liquidity",
-  staked: "Staked OVL",
+  staked: "Treasury staking",
   x102482987Ovl: "- OVL",
   x102482987Ovl2: "- OVL",
   x102482987OvlUsd2: "- USD",
@@ -42,7 +42,6 @@ class Stats extends Component {
         </div>
         <div className="py-2">
           <div className="roboto-bold-mine-shaft-24px"><u>{data.staked}</u></div>
-          <div className="pt-1 roboto-normal-mine-shaft-16px">{data.x102482987OvlAmount5}</div>
           <div className="pt-1 roboto-normal-mine-shaft-16px">{data.x102482987OvlApy5}</div>
         </div>
       </div>
