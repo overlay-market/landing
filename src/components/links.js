@@ -58,6 +58,14 @@ class Links extends Component {
         </Row>
         <Row className="py-2">
           <Col xs={2} className="roboto-bold-bon-jour-24px">
+            <img className="icon-3" src={data.discord5121} />
+          </Col>
+          <Col style={{ lineHeight: '1.35' }}>
+            <a href="https://discord.gg/FgNhRNtQYv" className="roboto-normal-mine-shaft-20px"><u>{data.discord}</u></a>
+          </Col>
+        </Row>
+        <Row className="py-2">
+          <Col xs={2} className="roboto-bold-bon-jour-24px">
             <img className="icon-3" src={data.telegram5121} />
           </Col>
           <Col style={{ lineHeight: '1.35' }}>
